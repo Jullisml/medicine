@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	</head>
+	<body>	
+<div class = "layout">
+
+<div class= "left">
+<div class= "left_2">
+<ul>
+  <li><img class = "catalog" src="./images/img2.png" /></li>
+  <li><img class = "catalog" src="./images/img3.png" /></li>
+  <li><img class = "catalog" src="./images/img4.png" /></li>
+</ul>
+</div>
+<div class= "right2">
+<img  class = "catalog1" onmouseout="this.src='./images/img1.png'" onmouseover="this.src='./images/img2.png'" src="this.src='./images/img1.png" class="partner">
+</div>
+</div>
+
+<div class= "right">
+<h2>РУБАШКА MEDICINE</h2>
+
+<div class = "header">
+<a href= "#" > Рубашка Medicine </a>
+<a href= "#" > Все модели Medicine </a>
+<a href= "#" > Рубашки </a>
+</div>
+
+<div class = "product">
+<span class = "product_price_old"><del> 2699 </del></span>
+<span class = "product_price_current"> 2499 ₽ </span>
+<span class = "wordpromo"><span class = "product_price_promo"> 2227 ₽ </span> - с промокодом  </span>
+</div>
+
+<div class = "delivery">
+
+<div class = "delivery_icon">
+<img class="icon" src= "./images/Layer_99.png" alt="#"/>
+В наличии в магазине <a class = "lmd" href = "#"> Lamoda </a>
+</div>
+<div class = "delivery_icon">
+<img class="icon" src= "./images/del.png" alt="#"/>
+Бесплатная доставка </div>
+
+</div>
+
+<button class ="blue">В магазин</button>
+<button class ="custom">В избранное</button>
+<div class = "tx">
+<p>Рубашка Medicine выполнена из вискозной ткани с клетчатым узором.</p>
+<p>Детали: прямой крой; отложной воротник; планка из манжеты на пуговицах; карман на груди.</p>
+</div>
+
+<ul class = "social"> 
+    <p class = "share"> Поделиться: </p>
+	<li><a class = "social-vk" href = "#" rel = "noopener"></a></li>
+	<li><a class = "social-google" href = "#" rel = "noopener"></a></li>
+	<li><a class = "social-fb" href = "#"  rel = "noopener"></a></li>
+	<li><a class = "social-tw" href = "#"  rel = "noopener"></a></li>
+</ul>
+
+<script>
+$('.js-hover').hover(function() {
+ var _this = this,
+  images = _this.getAttribute('data').split(','),
+  counter = 0;
+ this.setAttribute('data-src', this.src);
+ _this.timer = setInterval(function() {
+  if(counter > images.length) {
+   counter = 0;
+  }
+  if (images[counter] != undefined) {
+   _this.src=images[counter];
+  } else {
+   _this.src=_this.getAttribute('data-src');
+  }
+
+  counter++;
+ }, 750);
+
+}, function() {
+ this.src = this.getAttribute('data-src');
+ clearInterval(this.timer);
+});
+</script>
+</div>
+</div>
+</div>
+</body>
+</html>
